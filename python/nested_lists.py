@@ -7,24 +7,6 @@ if __name__ == '__main__':
         l.append(name)
         l.append(score)
         lis.append(l)
-    # print(lis)
-    # smallest=lis[0][1]
-    # # second=
-    # for i in range(0, len(lis)):
-    #     if lis[i][1]>smallest:
-    #         second=lis[i][1]
-    #         break
-    
-    # for i in range(0, len(lis)):
-    #     # print(second)
-    #     # if lis[i][1] < second:
-    #     if lis[i][1] < smallest:
-    #         second=smallest
-    #         smallest=lis[i][1]
-    #     elif lis[i][1] <second and lis[i][1] > smallest:
-    #         second=lis[i][1]
-        
-  
     smallest=lis[0][1]
     second=lis[0][1]
     for i in range(0, len(lis)):
@@ -37,10 +19,6 @@ if __name__ == '__main__':
             second=lis[i][1]
         elif smallest== second:
             second=lis[i][1]
-        # print(smallest,",", second)
-
-       
-    
     list2=[]     
     for i in range(0, len(lis)):
         if lis[i][1] == second:
