@@ -1,43 +1,20 @@
-x, y = input("").split()
-# print(x,y)
-# n=list(map(int, input("").split()))
-# for _ in range(int(y)):
-#     a = set(map(int, input("").split()))
-#     # a.append(numbers)
-# # a=set(map(int, input("").split()))
-# b=set(map(int, input("").split()))
+# x, y = map(int, input().split())
 
 
 
-def input_set(prompt):
-    return set(map(int, input(prompt).split()))
+# n = list(map(int, input().split()))
 
-# Take input for integer 'n'
-n = int(input(""))
-# Take input for set 'a'
-a = input_set("")
+# a = set(map(int, input().split()))
 
-# Take input for set 'b'
-b = input_set("")
+# b = set(map(int, input().split()))
 
-
-# Print the sets and 'n'
-print("\nSets and 'n' value:")
-print("Set 'a':", a)
-print("Set 'b':", b)
-print("'n':", n)
-
-
-
-
-# print(n,a,b)
-happiness=0
-# for i in a:
-#     if i in n:
-#         happiness+=1
-# for i in b:
-#     if i in n:
-#         happiness-=1
+# happiness=0
+# # for i in a:
+# #     if i in n:
+# #         happiness+=1
+# # for i in b:
+# #     if i in n:
+# #         happiness-=1
 # for i in n:
 #     if i in a:
 #         happiness+=1
@@ -46,5 +23,27 @@ happiness=0
 #         happiness-=1
 #         b.remove(i)
 # print(happiness)
-# print(" this is the sighn you are looking for")
-print(n,a,b)
+# # print(" this is the sighn you are looking for")
+
+
+
+def calculate_happiness(arr, liked_set, disliked_set):
+    happiness = 0
+
+    for num in arr:
+        if num in liked_set:
+            happiness += 1
+        elif num in disliked_set:
+            happiness -= 1
+
+    return happiness
+
+# Taking user inputs
+n, m = map(int, input().split())
+arr = list(map(int, input().split()))
+liked_set = set(map(int, input().split()))
+disliked_set = set(map(int, input().split()))
+
+# Calculate and print the final happiness
+result = calculate_happiness(arr, liked_set, disliked_set)
+print( result)
